@@ -1,0 +1,50 @@
+@import 'scale';
+
+// @layer utilities registra .ft-*/.-ft-* como utilidades de Tailwind
+// (@apply las reconoce en cualquier archivo, no solo con @extend).
+@layer utilities {
+  @include fluid-scale-classes;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+.mono {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-weight: 200;
+}
+
+h1 { @extend .ft-6 }
+h2 { @extend .ft-5 }
+h3 { @extend .ft-4 }
+h4 { @extend .ft-3 }
+h5 { @extend .ft-2 }
+h6 { @extend .ft-1 }
+li { @extend .-ft-1 }
+label { @extend .-ft-3 }
+b { @apply font-bold }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: #1a1a1a;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+p {
+  @extend .ft-0;
+  color: #1a1a1a;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+a {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+}
